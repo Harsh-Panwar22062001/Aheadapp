@@ -1,0 +1,52 @@
+.timeline {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px;
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .timeline-item {
+    position: relative;
+    margin-bottom: 20px;
+    padding: 20px;
+    border-left: 2px solid #4CAF50; 
+    background-color: #f9f9f9; 
+    transition: background-color 0.3s ease;
+    display: flex;
+    align-items: flex-start;
+    width: 60%;
+    max-width: 300px;
+  }
+  
+  .timeline-item:hover {
+    background-color: #e0e0e0; /* Hover color */
+  }
+  
+  .timeline-date {
+    font-weight: 600;
+    color: #4CAF50; /* Graceful color */
+    font-size: 16px;
+    margin-right: 20px;
+  }
+  
+  .timeline-event {
+    font-size: 18px;
+    color: #333; /* Text color */
+    flex: 1;
+  }
+  
+  /* Framer Motion Animations */
+  .timeline-item {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  
+  .timeline-item.active {
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+  }
+  
